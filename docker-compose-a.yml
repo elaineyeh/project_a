@@ -1,0 +1,6 @@
+version: '3'
+services:
+  prj_a:
+    image: nginx
+    volumes:
+      - /Users/awesome/Documents/Git/nginx/a:/usr/share/nginx/html

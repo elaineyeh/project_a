@@ -1,0 +1,20 @@
+version: 2 # use CircleCI 2.0
+jobs: # A basic unit of work in a run
+  deploy:
+    machine: true
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "f9:78:ca:9e:fc:8d:1c:3c:10:74:5d:cc:db:bd:aa:39"
+
+      - run:
+          name: Deploy to server
+          command: |
+            ssh $USER@$HOST < deploy.sh
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - deploy
