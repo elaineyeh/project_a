@@ -1,5 +1,4 @@
-rmkdir docker-compose
-mkdir docker-compose
+mkdir -p docker-compose
 cd $CIRCLE_PROJECT_REPONAME
 git pull
 
