@@ -12,7 +12,7 @@ FILENAME=`ls ./*.yml`
 FILE="docker-compose"
 for EACHFILE in $FILENAME
 do
-   $FILE+=" -f "+$EACHFILE
+   FILE+=" -f "+$EACHFILE
 done
 $FILE+=" up"
 
