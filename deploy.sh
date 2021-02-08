@@ -1,4 +1,5 @@
 cd $CIRCLE_PROJECT_REPONAME
+pwd
 git pull
 mkdir -p ../docker-compose
 
