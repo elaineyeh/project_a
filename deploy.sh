@@ -8,6 +8,7 @@ envsubst < docker-compose-template.yml > docker-compose-$CIRCLE_PROJECT_REPONAME
 cp docker-compose-$CIRCLE_PROJECT_REPONAME.yml ../docker-compose
 
 cd ../docker-compose
+pwd
 FILENAME=`ls ./*.yml`
 FILE="docker-compose"
 for EACHFILE in $FILENAME
