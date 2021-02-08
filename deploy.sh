@@ -1,6 +1,6 @@
-mkdir -p docker-compose
 cd $CIRCLE_PROJECT_REPONAME
 git pull
+mkdir -p ../docker-compose
 
 envsubst < docker-compose-template > docker-compose-$CIRCLE_PROJECT_REPONAME.yml
 cp docker-compose-$CIRCLE_PROJECT_REPONAME.yml ../docker-compose
