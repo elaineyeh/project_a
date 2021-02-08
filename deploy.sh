@@ -17,4 +17,4 @@ do
 done
 FILE+=" up -d"
 echo $FILE
-sh -c $FILE
+echo $FILE > run.sh
