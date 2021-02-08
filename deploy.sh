@@ -15,5 +15,5 @@ do
    FILE+=" -f "+$EACHFILE
 done
 FILE+=" up"
-
+echo $FILE
 sh -c $FILE
