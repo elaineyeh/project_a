@@ -8,6 +8,10 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout # check out the code in the project directory
+      - add_ssh_keys:
+          fingerprints:
+            - "c7:ce:e6:59:d6:34:62:26:8d:ec:11:63:f5:d7:1e:b0"
+
       - run: echo "hello world" # run the `echo` command
       - run: echo $CIRCLE_PROJECT_REPONAME
       - run: ssh $USER@$HOST < deploy.sh
