@@ -14,6 +14,6 @@ for EACHFILE in $FILENAME
 do
    FILE+=" -f "+$EACHFILE
 done
-$FILE+=" up"
+FILE+=" up"
 
 sh -c $FILE
