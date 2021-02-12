@@ -7,8 +7,8 @@ mkdir -p ../conf.d
 cd ../$CIRCLE_PROJECT_REPONAME
 pwd
 CONF_FILE=`ls ./*.conf`
-echo $ CONF_FILE
-for CONF in CONF_FILE
+echo $CONF_FILE
+for CONF in $CONF_FILE
 do
    mv $CONF ~/conf.d
 done
