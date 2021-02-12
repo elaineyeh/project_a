@@ -2,8 +2,16 @@ echo $CIRCLE_PROJECT_REPONAME
 cd $CIRCLE_PROJECT_REPONAME
 pwd
 git pull
-mkdir -p ../docker-compose
 
+mkdir -p ../conf.d
+cd ../$CIRCLE_PROJECT_REPONAME
+CONF_FILE=`ls ./*.conf`
+for CONF in CONF_FILE
+do
+   mv $CONF ~/conf.d
+done
+
+mkdir -p ../docker-compose
 envsubst < docker-compose-template.yml > docker-compose-$CIRCLE_PROJECT_REPONAME.yml
 cp docker-compose-$CIRCLE_PROJECT_REPONAME.yml ../docker-compose
 
